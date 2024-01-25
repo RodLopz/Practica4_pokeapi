@@ -2,25 +2,41 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Press Start 2P', cursive;
-  background-color: #bcbcbc; /* Fondo gris claro para simular la pantalla de la Game Boy */
+  background-color: #ffffff; /* Fondo blanco para mejorar la visibilidad en dispositivos móviles */
 }
 
 .bg {
   background: url('gameboy.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-size: contain; /* Ajustado para adaptarse mejor */
   height: 100vh;
   width: 100vw;
   position: fixed;
 }
 
 .principal-container {
-  position: relative;
+  padding: 20px; /* Margen interno para adaptarse mejor a diferentes tamaños de pantalla */
   text-align: center;
   z-index: 1; /* Asegura que el contenido se coloque encima del fondo */
 }
 
 #logo {
   width: 40%;
+}
+
+@media (max-width: 991.98px) {
+  #logo {
+    width: 100%; /* Ajustado para ocupar el ancho completo en dispositivos móviles */
+    margin-top: 2em;
+  }
+}
+
+#back-info-container {
+  border: 3px solid #fff;
+  border-radius: 1em;
+  width: 90%; /* Ajustado para un ancho más adaptable */
+  margin: 0 auto; /* Centra el contenedor */
+  padding-bottom: 4%;
+  background-color: #d3d3d3;
 }
 
 h1 {
@@ -90,32 +106,9 @@ input {
   transition: 800ms ease all;
 }
 
-#back-info-container {
-  border: 3px solid #fff;
-  border-radius: 1em;
-  width: 500px;
-  margin-left: 30%;
-  padding-bottom: 4%;
-  background-color: #d3d3d3;
-}
-
 li {
   list-style: none;
   color: #000;
-}
-
-@media (max-width: 991.98px) {
-  #logo {
-    width: 65%;
-    margin-top: 6em;
-  }
-
-  #search-keyword {
-    width: 60%;
-    margin-top: 3em;
-    height: 2em;
-    font-size: 1em;
-  }
 }
 
 /* Estilos para el reproductor de audio estilo Pokemon */
@@ -124,10 +117,10 @@ li {
   border: 2px solid #000; /* Borde negro de 2 píxeles */
   padding: 10px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
-  width: 200px; /* Ancho del reproductor de audio */
+  width: 100%; /* Ajustado para ocupar el ancho completo en dispositivos móviles */
   position: absolute; /* Posiciona absolutamente el reproductor */
-  top: 20px; /* Ajusta la distancia desde la parte superior según sea necesario */
-  right: 20px; /* Ajusta la distancia desde la derecha según sea necesario */
+  top: 10px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  right: 0; /* Ajusta la distancia desde la derecha según sea necesario */
   z-index: 2; /* Asegura que el reproductor esté sobre el fondo */
 }
 
